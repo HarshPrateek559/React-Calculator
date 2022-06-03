@@ -1,14 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
+import "./Display.scss";
 
-const Display = props => {
+const Display = (props) => {
   return (
-    <div>Change: {props.show}</div>
-  )
-}
+    <div className="display">
+      <div className="prev">{props.prev}</div>
+      <div className="show">{props.show}</div>
+    </div>
+  );
+};
 
 Display.propTypes = {
-    show: PropTypes.string
-}
+  show: PropTypes.string,
+};
 
-export default Display
+export default Display;

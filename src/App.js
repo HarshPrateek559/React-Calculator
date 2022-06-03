@@ -4,10 +4,18 @@ import Display from "./components/Display";
 import { useState } from "react";
 
 function App() {
-  const [show, setShow] = useState("perfect");
+  const [show, setShow] = useState("");
+  const [prev, setPrev] = useState('');
   return (
+    <>
     <div className="calculator">
-      <Display show={show} />
+    <div className="change">
+      <h1>calc</h1>
+      <div className="toggle">
+
+      </div>
+    </div>
+      <Display show={show} prev={prev}/>
       <div className="controls">
         <Buttons sym="7" setShow={setShow} show={show}/>
         <Buttons sym="8" setShow={setShow} show={show}/>
@@ -24,11 +32,12 @@ function App() {
         <Buttons sym="." setShow={setShow} show={show}/>
         <Buttons sym="0" setShow={setShow} show={show}/>
         <Buttons sym="/" setShow={setShow} show={show}/>
-        <Buttons sym="x" setShow={setShow} show={show}/>
-        <Buttons sym="RESET" setShow={setShow} show={show}/>
-        <Buttons sym="=" setShow={setShow} show={show}/>
+        <Buttons sym="*" setShow={setShow} show={show}/>
+        <Buttons sym="RESET" setShow={setShow} show={show} setPrev={setPrev}/>
+        <Buttons sym="=" setShow={setShow} show={show} setPrev={setPrev}/>
       </div>
     </div>
+    </>
   );
 }
 

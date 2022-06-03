@@ -1,0 +1,23 @@
+.display{
+    height: 100px;
+    width: 95%;
+    color: white;
+    background-color: #182034;
+    margin-top: 60px;
+    border-radius: 10px;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    font-size: 30px;
+}
+
+.prev{
+    font-size: 25px;
+}
+
+.show {
+    font-size: 45px;
+}
+
